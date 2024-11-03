@@ -1,2 +1,17 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
+
+<mat-sidenav-container class="sidenav-container">
+   
+  <mat-sidenav mode="side" opened>
+    <h3 class="text-center mt-3">Menu</h3>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/alumnos">Alumnos</a>
+      <a mat-list-item routerLink="/clases">Clases</a>
+      <a mat-list-item routerLink="/cursos">Cursos</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -9,6 +9,7 @@ import { SutdentsService } from './services/sutdents.service';
 export class HomeStudentsComponent implements OnInit {
 
   public students = [];
+  public title: string = 'estudiantes';
 
   constructor(private readonly studentService: SutdentsService) { }
 

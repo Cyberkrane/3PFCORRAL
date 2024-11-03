@@ -2,5 +2,26 @@
     "users":[],
     "classes":[],
     "courses":[],
-    "students":[]
+    "students":[
+        {
+            "id":1,
+            "name":"John Doe",
+            "alias":"jdoe1",
+            "email":"jdoe@me.com",
+            "age":20,
+            "courses":[
+                {
+                    "id":1,
+                    "name":"Angular",
+                    "classId":1
+                },
+                {
+                    "id":2,
+                    "name":"Java",
+                    "classId":1
+                }
+            ],
+            "classId":1
+        }
+    ]
 }
