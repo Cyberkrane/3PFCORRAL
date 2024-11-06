@@ -6,7 +6,6 @@ export interface IStudent {
     alias: string;
     email: string;
     age: number;
-    courses: ICourse[];
 }
 
 export interface ICourse {

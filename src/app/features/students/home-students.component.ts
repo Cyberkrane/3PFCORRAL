@@ -9,6 +9,7 @@ export class HomeStudentsComponent {
 
   public title: string = 'estudiantes';
 
-  constructor() { }
+  constructor() {}
 
 }
+
