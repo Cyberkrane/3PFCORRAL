@@ -1,1 +1,49 @@
-<p>students-form works!</p>
+
+<h2 mat-dialog-title>{{ abmAction }}</h2>
+<form [formGroup]="formulario" (ngSubmit)="enviar()">
+  <mat-dialog-content>
+
+    <mat-form-field>
+      <mat-label>Id</mat-label>
+      <input matInput formControlName="id"/>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" required />
+      <mat-error *ngIf="formulario.get('name')?.invalid">
+        El nombre es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Alias</mat-label>
+      <input matInput formControlName="alias" required />
+      <mat-error *ngIf="formulario.get('alias')?.invalid">
+        El alias es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required />
+      <mat-error *ngIf="formulario.get('email')?.invalid">
+        El email es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Edad</mat-label>
+      <input matInput formControlName="age" required />
+      <mat-error *ngIf="formulario.get('age')?.invalid">
+        El Edad es requerido.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Agrega otros campos aquí -->
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+    <button mat-button type="submit" [disabled]="formulario.invalid">Enviar</button>
+  </mat-dialog-actions>
+</form>
